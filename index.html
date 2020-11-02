@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Pashkov Frontend Developer</title>
+</head>
+
+<body>
+    <div class="wrapper" id="app">
+
+        <header class="header  padding">
+            <nav class="header-nav">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+                <ul v-if="ru=ru">
+                    <li>
+                        <a class="a" href="#work">Мои работы</a>
+                    </li>
+                    <li>
+                        <a class="a" href="#skills">Навыки</a>
+                    </li>
+                    <li>
+                        <a class="a" href="#certificates">Сертификаты</a>
+                    </li>
+                    <li>
+                        <a class="a" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+                <ul v-else>
+                    <li>
+                        <a class="a" href="#">My works</a>
+                    </li>
+                    <li>
+                        <a class="a" href="#">Skills</a>
+                    </li>
+                    <li>
+                        <a class="a" href="#">Certificates</a>
+                    </li>
+                    <li>
+                        <a class="a" href="#">Contacts</a>
+                    </li>
+                </ul>
+                <div class="lang" v-if="ru=ru" @click="ru=!ru">Ru</div>
+                <div class="lang" v-else @click="ru=!ru">En</div>
+            </nav>
+        </header>
+
+        <section class="section perspective">
+            <img class="bglogo" src="img/bglogo.png" alt="bglogo">
+            <article class="article padding" data-animation='{"opacity": {"1vh": "1", "10vh": "0.1"}}'>
+                <h1 class="h1" v-if="ru=ru">
+                    <span class="span">
+                        <span class="wow animate__slow animate__animated animate__headShake">F</span>
+                        <span class="wow animate__slow animate__animated animate__bounceInRight">r</span>
+                        <span class="wow animate__slow animate__animated animate__fadeInDown">o</span>
+                        <span class="wow animate__slow animate__animated animate__flipInX">n</span>
+                        <span class="wow animate__slow animate__animated animate__lightSpeedInLeft">t</span>
+                        <span class="wow animate__slow animate__animated animate__jackInTheBox">e</span>
+                        <span class="wow animate__slow animate__animated animate__zoomInDown">n</span>
+                        <span class="wow animate__slow animate__animated animate__flipInY">d</span>
+                    </span>
+                    <span class="span">
+                        <span class="wow animate__slow animate__animated animate__rollIn">р</span>
+                        <span class="wow animate__slow animate__animated animate__rotateIn">а</span>
+                        <span class="wow animate__slow animate__animated animate__lightSpeedInRight">з</span>
+                        <span class="wow animate__slow animate__animated animate__flipInX">р</span>
+                        <span class="wow animate__slow animate__animated animate__flipInY">а</span>
+                        <span class="wow animate__slow animate__animated animate__bounceInUp">б</span>
+                        <span class="wow animate__slow animate__animated animate__headShake">о</span>
+                        <span class="wow animate__slow animate__animated animate__bounceInUp">т</span>
+                        <span class="wow animate__slow animate__animated animate__fadeInUp">ч</span>
+                        <span class="wow animate__slow animate__animated animate__fadeInDown">и</span>
+                        <span class="wow animate__slow animate__animated animate__fadeInRight">к</span>
+                    </span>
+                </h1>
+                <h1 class="h1" v-else>
+                    <span class="span">
+                        <span class="wow animate__slow animate__animated animate__headShake">F</span>
+                        <span class="wow animate__slow animate__animated animate__bounceInRight">r</span>
+                        <span class="wow animate__slow animate__animated animate__fadeInDown">o</span>
+                        <span class="wow animate__slow animate__animated animate__flipInX">n</span>
+                        <span class="wow animate__slow animate__animated animate__lightSpeedInLeft">t</span>
+                        <span class="wow animate__slow animate__animated animate__jackInTheBox">e</span>
+                        <span class="wow animate__slow animate__animated animate__zoomInDown">n</span>
+                        <span class="wow animate__slow animate__animated animate__flipInY">d</span>
+                    </span>
+                    <span class="span">
+                        <span class="wow animate__slow animate__animated animate__headShake">d</span>
+                        <span class="wow animate__slow animate__animated animate__bounceInRight">e</span>
+                        <span class="wow animate__slow animate__animated animate__fadeInDown">v</span>
+                        <span class="wow animate__slow animate__animated animate__flipInX">e</span>
+                        <span class="wow animate__slow animate__animated animate__lightSpeedInLeft">l</span>
+                        <span class="wow animate__slow animate__animated animate__jackInTheBox">o</span>
+                        <span class="wow animate__slow animate__animated animate__zoomInDown">p</span>
+                        <span class="wow animate__slow animate__animated animate__flipInY">e</span>
+                        <span class="wow animate__slow animate__animated animate__flipInX">r</span>
+
+                    </span>
+                </h1>
+                <h2 class="h2 wow animate__animated animate__fadeInDown" v-if="ru=ru">Обо мне</h2>
+                <h2 class="h2 wow animate__animated animate__fadeInDown" v-else>About me</h2>
+                <div class="p wow animate__animated animate__fadeInDown" v-if="ru=ru">
+                    Привет! Меня зовут Евгений. Я начинающий Frontend Разработчик. Свой путь в IT я нчал с курсов в
+                    онлайн университете GeekBrains на факультете Frontend-разработки.
+                </div>
+                <div class="p wow animate__animated animate__fadeInDown" v-else>
+                    Hello! My name is Evgeniy. I am a Junior Frontend Developer. I started my way in IT
+                    from courses in
+                    online university GeekBrains at the Faculty of Frontend Development.
+                </div>
+            </article>
+        </section>
+
+        <section class="section-2" id="work">
+            <article class="fullwindow perspective dark article center-item"
+                data-sticky='{"from": "top", "duration": "200vh"}'>
+                <div class="fullwindow absolute light" data-animation='{
+    			"opacity": {"140vh": "1", "150vh": "0"},
+    			"transform": {
+    				"50vh": "translate3d(0, 0, 0) rotateX(0)",
+    				"75vh": "translate3d(0, 0, -50vh) rotateX(0)",
+    				"100vh": "translate3d(0, 0, -100vh) rotateX(70deg)",
+    				"125vh": "translate3d(0, 30vh, -100vh) rotateX(70deg)"
+                }}'>
+                    <h2 class="title h2" v-if="ru=ru">Мои работы</h2>
+                    <h2 class="title h2" v-else>My works</h2>
+                    <div class="fullwindow absolute work  wow animate__animated animate__backInUp"
+                        data-wow-offset="200">
+                        <a class="work__a" target="_blank" href="/assets/верстка/index.html">
+                            <img src="img/work.png" alt="1work">
+                            <div class="txt" v-if="ru=ru">Это моя первая официальная верстка в компании. Сделан адоптив
+                                с помощью
+                                Bootstrap-а. Аниммации не подключены. Так как работы над данной SPA всё ещё ведуться
+                                могу предоставить только свой черновик. Конечный результат может и бдет отличаться.
+                            </div>
+                            <div class="txt" v-else>This is my first official layout in the company. Made adoptive with
+                                Bootstrap. Animations are not connected. Since work on this SPA is still underway
+                                I can only provide my draft. The end result may and will be different.
+                            </div>
+                        </a>
+                        <a class="work__a" target="_blank" href="/assets/barbershop/index.html">
+                            <img src="img/bb.png" alt="2work">
+                            <div class="txt" v-if="ru=ru">С этой работы я начинал работу с Адоптивом и Анимации.
+                                Адоптив не завершен. Анимации прописаны врчную, библиотеки не использовал.
+                            </div>
+                            <div class="txt" v-else>From this job I started working with Adoptive and Animation.
+                                The adoption is not complete. Animations are written manually, I did not use libraries.
+                            </div>
+                        </a>
+                        <a class="work__a" target="_blank" href="/assets/forWorkBootstrap/index.html">
+                            <img src="img/test.png" alt="3work">
+                            <div class="txt" v-if="ru=ru">Это моя перваяя тестовя задача. Адоптив на Bootstrap-е без
+                                анимаций.
+                            </div>
+                            <div class="txt" v-else>
+                                This is my first test task. Adoptive on Bootstrap without animations.
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="fullwindow absolute light work " data-animation='{
+    			"opacity": {"125vh": "0", "150vh": "1"},
+    			"transform": {
+    				"125vh": "translate3d(0, -150vh, -100vh) rotateX(70deg)",
+    				"150vh": "translate3d(0, 30vh, -100vh) rotateX(70deg)",
+    				"175vh": "translate3d(0, 0, -50vh) rotateX(0)",
+    				"200vh": "translate3d(0, 0, 0) rotateX(0)"
+                }}
+                '>
+                    <a class="work__a wow  animate__slower  animate__animated animate__backInUp"
+                        data-wow-duration="2s" data-wow-duration="3s"  target="_blank"
+                        href="/assets/animation2/index.html">
+                        <img src="img/an.png" alt="1work">
+                        <div class="txt" v-if="ru=ru">
+                            Работа выполненя на курсах. Адоптив и Анимация пропианы вручную без библиотек.
+                        </div>
+                        <div class="txt" v-else>
+                            Work performed on the courses. Adoptive and Animation of propians manually without
+                            libraries. </div>
+                    </a>
+                    <a class="work__a wow animate__slower animate__animated animate__backInUp"
+                        data-wow-duration="2s" data-wow-duration="3s"  target="_blank"
+                        href="/assets/auction/index.html">
+                        <img src="img/au.png" alt="2work">
+                        <div class="txt" v-if="ru=ru">Тестовя верстка большого SPA. Адоптив и Анимация не подключены.
+                            Начало работы с JavaScript.
+                        </div>
+                        <div class="txt" v-else>
+                            Testing the layout of a large SPA. Adoptive and Animation are not connected. Getting started
+                            with JavaScript. </div>
+                    </a>
+                </div>
+
+            </article>
+        </section>
+
+        <section class="section-3" id="skills">
+            <article class="fullwindow light article">
+                <div class="skills fullwindow center-item">
+                    <h2 class="h2" v-if="ru=ru">Мои Навыки</h2>
+                    <h2 class="h2" v-else>My Skills</h2>
+                    <div class="block">
+                        <div data-wow-offset="100"
+                            class="item wow animate__animated animate__slower animate__headShake"><img
+                                src="img/html.png"></div>
+                        <div data-wow-offset="100"
+                            class="item wow animate__animated animate__slower animate__bounceInRight"><img
+                                src="img/css.png">
+                        </div>
+                        <div data-wow-offset="100"
+                            class="item wow animate__animated animate__slower animate__fadeInDown"><img
+                                src="img/sass.png">
+                        </div>
+                        <div data-wow-offset="100" class="item wow animate__animated animate__slower animate__flipInX">
+                            <img src="img/js.png"></div>
+                        <div data-wow-offset="100"
+                            class="item wow animate__animated animate__slower animate__lightSpeedInLeft"><img
+                                src="img/gulp.png"></div>
+                        <div data-wow-offset="100"
+                            class="item wow animate__animated animate__slower animate__jackInTheBox"><img
+                                src="img/git.png">
+                        </div>
+                        <div data-wow-offset="100"
+                            class="item wow animate__animated animate__slower animate__zoomInDown"><img
+                                src="img/vue.png"></div>
+                        <div data-wow-offset="100" class="item wow animate__animated animate__slower animate__flipInY">
+                            <img src="img/vuex.png"></div>
+                        <div data-wow-offset="100" class="item wow animate__animated animate__slower animate__rollIn">
+                            <img src="img/wop.png"></div>
+                        <div data-wow-offset="100" class="item wow animate__animated animate__slower animate__backInUp">
+                            <img src="img/wp.png"></div>
+                        <div data-wow-offset="100" class="item wow animate__animated animate__slower animate__rotateIn">
+                            <img src="img/xd.png"></div>
+                        <div data-wow-offset="100"
+                            class="item wow animate__animated animate__slower animate__lightSpeedInRight"><img
+                                src="img/ps.png">
+                        </div>
+                        <div data-wow-offset="100" class="item wow animate__animated animate__slower animate__flipInY">
+                            <img src="img/avo.png"></div>
+                        <div data-wow-offset="100"
+                            class="item wow animate__animated animate__slower animate__bounceInUp"><img
+                                src="img/zep.png"></div>
+                        <div data-wow-offset="100"
+                            class="item wow animate__animated animate__slower animate__headShake"><img
+                                src="img/sketch.png">
+                        </div>
+                        <div data-wow-offset="100" class="item wow animate__animated animate__slower animate__fadeInUp">
+                            <img src="img/figma.png"></div>
+                    </div>
+                </div>
+
+
+            </article>
+        </section>
+
+        <section class="section-4 ">
+            <article id="certificates" class="dark">
+                <div class="skills fullwindow">
+                    <div class="responsive slick ">
+                        <img src="img/cssru1.png">
+                        <img src="img/cssen1.png">
+                        <img src="img/cssru2.png">
+                        <img src="img/cssen2.png">
+                        <img src="img/jsru1.png">
+                        <img src="img/jsen1.png">
+                        <img src="img/gitru1.png">
+                        <img src="img/giten1.png">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="section-5" id="contacts">
+            <article class="fullwindow perspective dark article" data-sticky='{"from": "top", "duration": "200vh"}'>
+                <div class="fullwindow absolute dark" data-animation='{
+    			"opacity": {"140vh": "1", "150vh": "0"},
+    			"transform": {
+    				"50vh": "translate3d(0, 0, 0) rotateX(0)",
+    				"75vh": "translate3d(-20vh, 0, -50vh) rotateX(0)",
+    				"100vh": "translate3d(-80vh, -50vh, -100vh) rotateX(180deg)",
+    				"125vh": "translate3d(-1000vh, 30vh, -100vh) rotateX(70deg)"
+                }}'>
+                    <div class="fullwindow center-item contact" v-if="ru=ru">
+
+                        <h2 class="h2">
+                            Контакты
+                        </h2>
+                        <div class="block">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="phone">
+                                        <img src="img/phone.png">
+                                        <span>Телефон</span>
+                                    </div>
+                                    <span>+7-950-048-67-53</span>
+                                </div>
+                                <div class="col">
+                                    <div class="phone">
+                                        <img src="img/email.png">
+                                        <span>Email</span>
+                                    </div>
+                                    <span>pashkoveval@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a target="_blanck" href="https://wa.me/79500486753"><img src="img/watsup.png"></a>
+                                <a target="_blanck" href="https://t.me/pashkoveval"><img src="img/telega.png"></a>
+                                <a target="_blanck" href="https://vk.com/pashkoveval"><img src="img/vk.png"></a>
+                                <a target="_blanck" href="https://www.instagram.com/pashkoveval"><img
+                                        src="img/insta.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fullwindow center-item contact" v-else>
+
+                        <h2 class="h2">
+                            Contacts
+                        </h2>
+                        <div class="block">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="phone">
+                                        <img src="img/phone.png">
+                                        <span>Phone</span>
+                                    </div>
+                                    <span>+7-950-048-67-53</span>
+                                </div>
+                                <div class="col">
+                                    <div class="phone">
+                                        <img src="img/email.png">
+                                        <span>Email</span>
+                                    </div>
+                                    <span>pashkoveval@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <a target="_blanck" href="https://wa.me/79500486753"><img src="img/watsup.png"></a>
+                                <a target="_blanck" href="https://t.me/pashkoveval"><img src="img/telega.png"></a>
+                                <a target="_blanck" href="https://vk.com/pashkoveval"><img src="img/vk.png"></a>
+                                <a target="_blanck" href="https://www.instagram.com/pashkoveval"><img
+                                        src="img/insta.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fullwindow absolute dark work" data-animation='{
+    			"opacity": {"125vh": "0", "150vh": "1"},
+    			"transform": {
+    				"125vh": "translate3d(300vh, -150vh, -100vh) rotateX(70deg)",
+    				"150vh": "translate3d(0, 30vh, -100vh) rotateX(70deg)",
+    				"175vh": "translate3d(0, 0, -50vh) rotateX(0)",
+    				"200vh": "translate3d(0, 0, 0) rotateX(0)"
+                }}
+                '>
+                    <div class="thanks fullwindow center-item">
+                        <h2 v-if="ru=ru" class="h2 wow animate__animated animate__slower animate__headShake">
+                            Огромное спасибо семейству Жибиновых <a target="_blanck"
+                                href="https://zhibinov.github.io/">Павлу</a> и
+                            Екатерине.
+                        </h2>
+                        <h2 v-else class="h2 wow animate__animated animate__slower animate__headShake">
+                            Many thanks to the Zhibinov family <a target="_blanck"
+                                href="https://zhibinov.github.io/">Pavel</a> and
+                            Catherine.
+                        </h2>
+                    </div>
+
+
+                </div>
+
+            </article>
+        </section>
+    </div>
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/stickymate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        new WOW({
+
+        }).init();
+    </script>
+    <script type="text/javascript">
+        $('.responsive').slick({
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            variableWidth: true,
+            dots: false,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
+
+</body>
+
+</html>
