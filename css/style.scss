@@ -326,9 +326,13 @@ h6 {
   }
 }
 .thanks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   .h2 {
     margin: 0;
-    text-align: center;
+    
   }
   a {
     color: rgb(25, 14, 65);
