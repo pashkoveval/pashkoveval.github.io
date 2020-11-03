@@ -12,7 +12,9 @@
 </head>
 
 <body>
-    <div class="wrapper" id="app">
+    <div class="wrapper" id="app" @mousemove="move">
+
+        <div class="mouse" :style="{left,top}"></div>
 
         <header class="header  padding">
             <nav class="header-nav">
